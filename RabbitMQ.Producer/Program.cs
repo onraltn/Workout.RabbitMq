@@ -13,7 +13,7 @@ internal class Program
         };
         using var connection = factory.CreateConnection();
         using var channel = connection.CreateModel();
-        QueueProducer.Publish(channel);
+        DirectExchangePublisher.Publish(channel);
 
     }
 }
